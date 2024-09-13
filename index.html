@@ -5,73 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>第一个网页</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: url('img/背景2.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-    .container {
-      display: flex;
-      width: 70%;
-      border: 1px solid #ddd;
-      background: rgba(255, 255, 255, 0.95); /* 半透明背景 */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-    .info {
-      padding: 20px;
-      width: 40%;
-    }
-    .info h2 {
-      margin: 0;
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-    .info p {
-      margin: 0;
-      color: #666;
-    }
-    .divider {
-      width: 1px;
-      background: #ddd;
-    }
-    .image-container {
-      width: 60%;
-      position: relative;
-    }
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 30px;
-      color: #007bff;
-      cursor: pointer;
-      transition: color 0.3s;
-      user-select: none;
-    }
-    .arrow:hover {
-      color: #0056b3;
-    }
-    .arrow.left {
-      left: -40px; /* 调整箭头位置 */
-    }
-    .arrow.right {
-      right: -40px; /* 调整箭头位置 */
-    }
-  </style>
+  <link rel="stylesheet" href="css/style-index.css">
 </head>
+
 <body>
 
 <div class="container">
@@ -87,35 +23,7 @@
   </div>
 </div>
 
-<script>
-  const images = [
-    { src: 'img/月.jpg', title: '月', description: '好看吧，我拍的！' },
-    { src: 'img/公园的夫妇.jpg', title: '公园的夫妇', description: '拍摄于衡阳平湖公园，感觉这一幕很暖心。' },
-    { src: 'img/衡山.jpg', title: '敢问路在何方', description: '拍摄于衡山山顶' }
-  ];
-
-  let currentIndex = 0;
-
-  function updateContent(index) {
-    const imageElement = document.getElementById('image');
-    const titleElement = document.getElementById('title');
-    const descriptionElement = document.getElementById('description');
-
-    imageElement.src = images[index].src;
-    titleElement.textContent = images[index].title;
-    descriptionElement.textContent = images[index].description;
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateContent(currentIndex);
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateContent(currentIndex);
-  }
-</script>
+<script src="js/app.js"></script>
 
 </body>
 </html>

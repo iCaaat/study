@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('../img/背景2.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .container {
+    display: flex;
+    width: 70%;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.95); /* 半透明背景 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .info {
+    padding: 20px;
+    width: 40%;
+  }
+  .info h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .info p {
+    margin: 0;
+    color: #666;
+  }
+  .divider {
+    width: 1px;
+    background: #ddd;
+  }
+  .image-container {
+    width: 60%;
+    position: relative;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s;
+    user-select: none;
+  }
+  .arrow:hover {
+    color: #0056b3;
+  }
+  .arrow.left {
+    left: -40px; /* 调整箭头位置 */
+  }
+  .arrow.right {
+    right: -40px; /* 调整箭头位置 */
+  }
