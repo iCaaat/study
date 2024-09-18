@@ -74,6 +74,3 @@ body {
     font-size: 14px;
     border-radius: 5px;
 }
-.brightness-btn:hover {
-  background-color: rgba(0, 0, 0, 0.2); /* 鼠标悬停时略微变暗 */
-}
