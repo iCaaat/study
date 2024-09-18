@@ -25,3 +25,16 @@ const images = [
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateContent(currentIndex);
   }
+
+  document.getElementById('brightness-btn').addEventListener('click', function() {
+    const imageElement = document.getElementById('image');
+    const button = this;
+
+    if (button.textContent === 'Darken') {
+        imageElement.style.filter = 'brightness(70%)'; // 设置亮度为 70%
+        button.textContent = 'Lighten'; // 按钮变为 "Lighten"
+    } else {
+        imageElement.style.filter = 'brightness(100%)'; // 恢复亮度为 100%
+        button.textContent = 'Darken'; // 按钮变回 "Darken"
+    }
+});
